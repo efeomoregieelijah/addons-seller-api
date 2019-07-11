@@ -92,9 +92,7 @@ class SellerApi
 		
 		if ($method === false) {
 			$postFields = http_build_query($postFields);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);	
 		} else {
-			$postFields = $postFields;
 			curl_setopt($ch, CURLOPT_POST, $method);
 		}
 
